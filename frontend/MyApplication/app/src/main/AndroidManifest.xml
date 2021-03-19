@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="HappyPlanner"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.UserMainActivity" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.AdminMainActivity" />
+        <activity android:name=".activities.UsersActivity" />
+        <activity android:name=".activities.UserDetailsActivity" />
+        <activity android:name=".activities.EditUserActivity" />
+        <activity android:name=".activities.DiaryEntryActivity" />
+        <activity android:name=".activities.CategoriesActivity" />
+        <activity android:name=".activities.CategoryAddEditActivity" />
+        <activity android:name=".activities.ActivitiesActivity" />
+        <activity android:name=".activities.ActivityAddEditActivity" />
+        <activity android:name=".activities.CalendarEntriesActivity" />
+        <activity android:name=".activities.AddEditCalendarEntryActivity" />
+        <activity android:name=".activities.CompletedEntryActivity" />
+        <activity android:name=".activities.CompletedEntryDetailsActivity" />
+        <activity android:name=".activities.CalendarEntryDetails" />
+        <activity android:name=".activities.CompletedEntryCreationActivity" />
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

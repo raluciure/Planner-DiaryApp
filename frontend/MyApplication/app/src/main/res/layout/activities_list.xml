@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview_activity"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:dividerHeight="10dp"
+        android:divider="@drawable/background"></ListView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        tools:ignore="HardcodedText">
+
+        <!--This will be the parent Floating Action Button-->
+        <!--After the implementation the Floating Action Button
+             at the bottom right corner-->
+        <!--After clicking the above button the following two buttons
+            will pop up. So this button is considered as parent FAB-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/more_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/more_ic"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--Floating action button for add alarm-->
+        <!--Make sure that you are constraining this
+            button to the parent button-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_activity_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toTopOf="@+id/more_fab"
+            app:layout_constraintEnd_toEndOf="@+id/more_fab"
+            app:layout_constraintStart_toStartOf="@+id/more_fab"
+            app:srcCompat="@drawable/add_ic" />
+
+        <!--Action name text for the add alarm button-->
+        <!--Make sure that you are constraining this Text to
+            the add Alarm FAB button-->
+        <TextView
+            android:id="@+id/add_activity_action_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Add Activity"
+            app:layout_constraintBottom_toBottomOf="@+id/add_activity_fab"
+            app:layout_constraintEnd_toStartOf="@+id/add_activity_fab"
+            app:layout_constraintTop_toTopOf="@+id/add_activity_fab" />
+
+        <!--Floating action button for add person-->
+        <!--Make sure that you are constraining this
+            button to the add Alarm FAB button-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/return_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toTopOf="@+id/add_activity_fab"
+            app:layout_constraintEnd_toEndOf="@+id/add_activity_fab"
+            app:layout_constraintStart_toStartOf="@+id/add_activity_fab"
+            app:srcCompat="@drawable/back_ic" />
+
+        <!--Action name text for the add person button-->
+        <!--Make sure that you are constraining this Text
+            to the add Person FAB button-->
+        <TextView
+            android:id="@+id/add_return_action_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Return to Main Screen"
+            app:layout_constraintBottom_toBottomOf="@+id/return_fab"
+            app:layout_constraintEnd_toStartOf="@+id/return_fab"
+            app:layout_constraintTop_toTopOf="@+id/return_fab" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
